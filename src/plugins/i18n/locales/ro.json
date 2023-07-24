@@ -42,7 +42,8 @@
         "pushNotificationsConfirm": "Pentru ca notificările să funcționeze, Memmy trebuie să trimită token-ul de autentificare către serverul nostru. În acest moment, aceasta este singura modalitate viabilă de a permite utilizatorilor să primească notificări push. Rețineți că serverele Memmy NU au acces la parola ta, ci doar la tokenul de autentificare. Token-urile de autentificare pot fi revocate prin schimbarea parolei.\n\nCodul sursă complet pentru serverul de notificări push Memmy este disponibil la https:\/\/github.com\/gkasdorf\/memmy-push.\n\nDorești să continui?",
         "deleteAccountConfirm": "Pentru a elimina toate datele de pe serverele Memmy, dezactivează pur și simplu notificările. Dacă nu ai activate notificările, nu avem niciuna dintre datele ta.\n\nPentru a îți șterge contul Lemmy, trebuie mai întâi să vizitezi {{0}} și să te conectezi. Apoi, mergi la Profil unde îți poți șterge contul apăsând \"Șterge contul\".",
         "registrationError": "A apărut o eroare în timpul înregistrării.",
-        "useUsername": "Folosește numele de utilizator când te autentifici pe (instanță/@)."
+        "useUsername": "Folosește numele de utilizator când te autentifici pe (instanță/@).",
+        "reportPost": "Te rog să descri motivul pentru care ai raportat acest post."
       }
     },
     "toast": {
@@ -61,7 +62,9 @@
       "blocked": "{{0}} a fost blocat",
       "enterUrl": "Introdu linkul",
       "enterLabel": "Introdu eticheta",
-      "linkError": "A apărut o eroare la deschiderea acestui link"
+      "linkError": "A apărut o eroare la deschiderea acestui link",
+      "textCopied": "Text Copiat",
+      "linkCopied": "Link Copiat"
     },
     "relativeTime": {
       "future": "în %s",
@@ -93,6 +96,7 @@
     },
     "settings": {
       "reportBugBtn": "Raportați o eroare pe Github",
+      "swipeToVote": "Glisează pentru a vota",
       "haptics": {
         "Off": "Oprit",
         "Light": "Ușor",
@@ -109,10 +113,12 @@
           "useReaderMode": "Utilizați modul pentru cititor digital"
         },
         "markRead": {
-          "header": "MARK READ SETTINGS",
-          "onPostOpen": "Marchează ca citit la deschiderea postului",
-          "onImageView": "Marchează ca citit la vizualizarea imaginii",
-          "onVote": "Marchează ca citit după vot",
+          "header": "MARCHEAZĂ CA CITIT",
+          "onPostOpen": "La deschiderea postului",
+          "onImageView": "La vizualizarea imaginii",
+          "onVote": "După ce votezi",
+          "onFeedScroll": "La scroll pe feed",
+          "onCommunityScroll": "La scroll pe comunitate",
           "footer": "Funcția \"Ascunde postările citite în feed\" va ascunde automat postările citite de fiecare dată când feed-ul este actualizat. Dacă funcția este activată, mesajele citite vor afișa un buton de acțiune pentru a ascunde mesajele citite fără o reîmprospătare a feed-ului."
         }
       },
@@ -158,20 +164,35 @@
           "placeholder": "Adresa serverului"
         },
         "credentials": {
-          "header": "Server Credentials",
-          "footer": "Credentials for the server you are connecting to"
+          "header": "Acreditările Serverului",
+          "footer": "Acreditările serverului la care te conectezi"
         }
+      },
+      "filters": {
+          "addKeyword": "Adaugă un cuvânt cheie",
+          "areYouSureKeyword": "Ești sigur că dorești să elimini acest cuvânt cheie?",
+          "enterAKeyword": "Adaugă un cuvânt cheie care să fie filtrat.",
+          "noKeywords": "Niciun cuvânt cheie...",
+  
+          "addInstance": "Adaugă instanță",
+          "areYouSureInstance": "Ești sigur că dorești să elimini această instanță?",
+          "enterAnInstance": "Adaugă o instanță care să fie eliminată.",
+          "noInstances": "Nicio instanță..."
       }
     },
     "traverse": {
-      "noSubscriptions": "Nu ești abonat la nicio comunitate."
+      "noSubscriptions": "Nu ești abonat la nicio comunitate.",
+      "noSubscriptionsFiltered": "Nu am găsit niciun abonament în această căutare.",
+      "noFavoritesFiltered": "Nu am găsit nimic din favoritele tale în această căutare."
     },
     "post": {
       "header": "Info post",
       "title": "Titlu",
       "link": "Link (opțional)",
       "body": "Conținut (opțional)",
-      "bodyPlaceholder": "Scrie ceva!"
+      "bodyPlaceholder": "Scrie ceva!",
+      "share": "Distribuie acest post",
+      "report": "Raportează postul"
     },
     "onboarding": {
       "hello": "Salut",
@@ -261,6 +282,25 @@
     "imageView": {
       "dialogDesc": "Se descarcă imaginea..."
     },
+    "sort": {
+      "Top": "Top",
+      "top": {
+        "Hour": "Ultima oră",
+        "SixHours": "Șase ore",
+        "TwelveHours": "Doisprezece ore",
+        "Day": "Zi",
+        "Week": "Săptămână",
+        "Month": "Lună",
+        "Year": "An",
+        "AllTime": "Tot timpul"
+      },
+      "Hot": "Hot",
+      "Active": "Activitate",
+      "New": "Noi",
+      "MostComments": "Comentarii",
+      "NewComments": "Comentarii noi",
+      "Old": "Vechime"
+    },
     "Feed": "Feed",
     "Comments": "Comentarii",
     "Traverse": "Traverse",
@@ -289,9 +329,13 @@
     "Add Account": "Adaugă Cont",
     "Create Account": "Creează Cont",
     "Mark Post Read On": "Marchează ca citit...",
+    "Hide Read Posts": "Ascunde posturile citite",
     "View": "Vezi",
     "Content": "Conținut",
     "Appearance": "Aspect",
+    "Filters": "Filtre",
+    "Keywords": "Cuvinte cheie",
+    "Instances": "Instanțe",
     "Theme": "Tema",
     "Icon": "Pictogramă",
     "General": "General",
@@ -304,6 +348,7 @@
     "Reply": "Răspunde",
     "Report Post": "Reportează Post",
     "Cancel": "Înapoi",
+    "Remove": "Șterge",
     "Submit": "Trimite",
     "Retry": "Reîncearcă",
     "Language": "Limbă",
@@ -318,7 +363,8 @@
     "Clear Cache": "Clear Cache",
     "Default Sort": "Default Sort",
     "Default Comment Sort": "Default Comment Sort",
-    "Hide Read Posts on Feed": "Hide Read Posts on Feed",
+    "Hide Read Posts on Feed": "Ascunde posturile citite din feed",
+    "Hide Read Posts in Communities": "Ascunde posturile citite din comunități",
     "Show Hide Read Button": "Show Hide Read Button",
     "Show Comment Actions": "Show Comment Actions",
     "NSFW": "NSFW",
@@ -372,6 +418,21 @@
     "Description": "Descriere",
     "Label": "Etichetă",
     "Trending": "Trending",
-    "Go Back": "Înapoi"
+    "Go Back": "Înapoi",
+    "Stats": "Stats",
+    "Moderators": "Moderators",
+    "Local": "Local",
+    "Upvote": "Upvote",
+    "Downvote": "Downvote",
+    "Block User": "Block User",
+    "Block": "Block",
+    "Community": "Community",
+    "Post Size": "Post Size",
+    "Compact": "Compact",
+    "Large": "Large",
+    "None": "None",
+    "Left": "Left",
+    "Right": "Right",
+    "Account Created": "Account Created"
   }
   
